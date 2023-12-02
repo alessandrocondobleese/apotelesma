@@ -1,0 +1,48 @@
+{
+  "name": "apotelesma",
+  "version": "0.0.1",
+  "description": "A TypeScript library for type-safe handling of operational outcomes, offering a structured approach to managing success and error cases in a robust and efficient manner.",
+  "keywords": [
+    "typescript",
+    "result",
+    "functional-programming",
+    "type"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "/dist",
+    "/index.d.ts"
+  ],
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write .",
+    "build": "rollup --config rollup.config.js && npm run build:types",
+    "build:types": "tsc -p ./tsconfig.types.json"
+  },
+  "author": "Alessandro Aguilar",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tsconfig/recommended": "^1.0.3",
+    "@tsconfig/strictest": "^2.0.2",
+    "@types/jest": "^29.5.10",
+    "jest": "^29.7.0",
+    "prettier": "3.1.0",
+    "rollup": "^4.5.2",
+    "ts-jest": "^29.1.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2"
+  }
+}
