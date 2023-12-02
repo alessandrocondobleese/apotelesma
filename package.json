@@ -1,6 +1,6 @@
 {
   "name": "apotelesma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A TypeScript library for type-safe handling of operational outcomes, offering a structured approach to managing success and error cases in a robust and efficient manner.",
   "keywords": [
     "typescript",
@@ -22,6 +22,10 @@
     "/dist",
     "/index.d.ts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessandrocondobleese/apotelesma"
+  },
   "sideEffects": false,
   "types": "./index.d.ts",
   "scripts": {
