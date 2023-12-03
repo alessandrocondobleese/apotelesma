@@ -1,12 +1,19 @@
 {
   "name": "apotelesma",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A TypeScript library for type-safe handling of operational outcomes, offering a structured approach to managing success and error cases in a robust and efficient manner.",
   "keywords": [
     "typescript",
+    "success",
+    "failure",
     "result",
-    "functional-programming",
-    "type"
+    "result-type",
+    "outcome",
+    "operation",
+    "type",
+    "monad",
+    "functional",
+    "functional-programming"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,6 +43,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "format": "prettier --write .",
     "build": "rollup --config rollup.config.js && npm run build:types",
     "build:types": "tsc -p ./tsconfig.types.json"

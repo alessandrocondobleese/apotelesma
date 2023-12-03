@@ -12,7 +12,25 @@ Apotelesma is a TypeScript/typescript library designed to provide a robust struc
 npm install apotelesma
 ```
 
-## Usage
+## Basic Usage
+```typescript
+function divide(a: number, b: number): Result<number> {
+    try {
+        return Result.success(a / b)
+    } catch(error) {
+        return Result.failure(error)
+    }
+}
+```
+
+#### Using runCatching
+```typescript
+function divide(a: number, b: number): Result<number> {
+    return Result.runCatching(function() {
+        return a / b
+    })
+}
+```
 
 ## Result<T>
 
@@ -31,7 +49,7 @@ if (result.isSuccess()) {
 ```
 
 #### `isFailure(): this is Result.failure<unknown>`
-- **Description**: Determines if the result is a failure.
+- **Description**: Determines if the result is a failure. Due to the Javascript error handling system a failure always be treated as unknown.
 - **Returns**: `boolean` - `true` if the result is a failure, otherwise `false`.
 - **Example**:
 ```typescript

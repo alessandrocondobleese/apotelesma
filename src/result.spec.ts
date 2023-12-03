@@ -160,6 +160,14 @@ describe("Given a Success", () => {
       expect(callback).toHaveBeenCalledWith(1);
     });
   });
+
+  describe("when calling onFailure", () => {
+    it("then should return this", () => {
+      const onFailure = result.onFailure();
+
+      expect(onFailure).toBe(result);
+    })
+  })
 });
 
 describe("Given a Failure", () => {
@@ -330,6 +338,14 @@ describe("Given a Failure", () => {
       });
     });
   });
+
+  describe("when calling onSuccess", () => {
+    it("then should return this", () => {
+      const onSuccess = result.onSuccess();
+
+      expect(onSuccess).toBe(result);
+    })
+  })
 
   describe("when calling onFailure", () => {
     it("then should call callback", () => {
