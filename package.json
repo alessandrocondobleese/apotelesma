@@ -1,6 +1,6 @@
 {
   "name": "apotelesma",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A TypeScript library for type-safe handling of operational outcomes, offering a structured approach to managing success and error cases in a robust and efficient manner.",
   "keywords": [
     "typescript",
