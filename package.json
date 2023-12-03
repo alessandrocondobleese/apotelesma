@@ -15,19 +15,18 @@
     "functional",
     "functional-programming"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "files": [
-    "/dist",
-    "/index.d.ts"
+    "/dist"
   ],
   "repository": {
     "type": "git",
